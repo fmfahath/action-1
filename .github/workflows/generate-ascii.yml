@@ -1,0 +1,16 @@
+name: generate ascii
+on: push
+
+jobs:
+    generate-ascii:
+        runs-on: ubuntu-latest
+        steps:
+             - name: checkout repo
+               uses: actions/checkout@v4
+
+             - name: List repo files
+               run: ls -ltra
+
+             - name: Executing shell script
+               run: ./ascii-script.sh
+        
